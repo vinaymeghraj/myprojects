@@ -1,0 +1,5 @@
+#Compile the program
+javac -cp $(hadoop classpath) SampleConsumer.java
+
+#Execute the program
+java -cp .:$(hadoop classpath) SampleConsumer
