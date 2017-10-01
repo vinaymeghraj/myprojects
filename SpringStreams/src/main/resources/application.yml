@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      defaultBinder: kafka
+      bindings:
+        ouput:
+          destination: test
+          binder: kafka
+        input:
+          destination: test
+          binder: kafka
+      kafka:
+        binder:
+          brokers: sn2:9092
+          zkNodes: sn1:5181
+          configuration.streams.consumer.default.stream: /tmp/kafka
+          configuration.streams.producer.default.stream: /tmp/kafka
