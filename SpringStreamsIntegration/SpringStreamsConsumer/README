@@ -6,3 +6,51 @@ mvn spring-boot:run
 
 To check MVN dependency tree :
 mvn dependency:tree
+
+Steps to Validate :
+
+maprcli stream cursor list -path /tmp/kafka -topic test -json                              {
+        "timestamp":1506985414869,
+        "timeofday":"2017-10-02 04:03:34.869 GMT-0700",
+        "status":"OK",
+        "total":1,
+        "data":[
+                {
+                        "consumergroup":"mapr",
+                        "topic":"test",
+                        "partitionid":"0",
+                        "produceroffset":"1",		<-------------
+                        "committedoffset":"2",		<-------------
+                        "producertimestamp":"2017-10-02T04:00:37.735-0700",
+                        "consumertimestamp":"1969-12-31T04:00:00.000-0800",
+                        "consumerlagmillis":"1506985237735"
+                }
+        ]
+}
+
+
+Push 1000 messages to {stream:topic}
+/home/mapr/spew 10 1000 | /opt/mapr/kafka/kafka-0.9.0/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic /tmp/kafka:test
+
+
+maprcli stream cursor list -path /tmp/kafka -topic test -json                              {
+        "timestamp":1506985469999,
+        "timeofday":"2017-10-02 04:04:29.999 GMT-0700",
+        "status":"OK",
+        "total":1,
+        "data":[
+                {
+                        "consumergroup":"mapr",
+                        "topic":"test",
+                        "partitionid":"0",
+                        "produceroffset":"1001",	   <-------------
+                        "committedoffset":"1002",      <-------------
+                        "producertimestamp":"2017-10-02T04:04:15.606-0700",
+                        "consumertimestamp":"2017-10-02T04:04:15.606-0700",
+                        "consumerlagmillis":"0"
+                }
+        ]
+}
+
+
+
