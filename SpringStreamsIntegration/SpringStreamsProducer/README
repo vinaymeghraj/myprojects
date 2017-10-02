@@ -6,3 +6,15 @@ mvn spring-boot:run
 
 To check MVN dependency tree :
 mvn dependency:tree
+
+Steps to Validate :
+
+Use streamanalyzer utility to validate messages are published to topic.
+
+[mapr@sn2 ~]$ mapr streamanalyzer -path /tmp/kafka -topics test
+Total number of messages: 65
+[mapr@sn2 ~]$ mapr streamanalyzer -path /tmp/kafka -topics test
+Total number of messages: 71
+[mapr@sn2 ~]$ mapr streamanalyzer -path /tmp/kafka -topics test
+Total number of messages: 74
+
