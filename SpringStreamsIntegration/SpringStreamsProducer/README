@@ -1,3 +1,13 @@
+Create Stream:
+maprcli stream create -path /tmp/kafka
+
+Create topic:
+maprcli stream topic create -path /tmp/kafka -topic test
+
+maprcli stream topic list -path /tmp/kafka
+partitions  maxlag  logicalsize  topic  consumers  physicalsize
+1           0       0            test   0          0
+
 Start Kafka Server :
 /opt/mapr/kafka/kafka-0.9.0/bin/kafka-server-start.sh /opt/mapr/kafka/kafka-0.9.0/config/server.properties
 
