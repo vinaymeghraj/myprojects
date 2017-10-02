@@ -1,0 +1,8 @@
+Start Kafka Server :
+/opt/mapr/kafka/kafka-0.9.0/bin/kafka-server-start.sh /opt/mapr/kafka/kafka-0.9.0/config/server.properties
+
+Go to Project Directory and execute :
+mvn spring-boot:run
+
+To check MVN dependency tree :
+mvn dependency:tree
