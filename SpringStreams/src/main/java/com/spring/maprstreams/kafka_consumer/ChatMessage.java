@@ -20,4 +20,6 @@ public class ChatMessage {
     public String getContents() {
         return contents;
     }
+    
+    
 }
