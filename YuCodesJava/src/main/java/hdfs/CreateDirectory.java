@@ -5,12 +5,12 @@ import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.conf.*;
 import org.apache.hadoop.util.LineReader;
-
 import com.mapr.fs.MapRFileSystem;
+
 /**
  * @author Vinayaka Meghraj
  * Command to execute this program
- * mvn exec:exec -Dexec.executable="java" -Dexec.args="-classpath %classpath -verbose:class com.mapr.test.MapRTest" >> out2.txt 2>&1
+ * mvn exec:exec -Dexec.executable="java" -Dexec.args="-classpath %classpath -verbose:class hdfs.CreateDirectory" >> out2.txt 2>&1
  * java -cp $(hadoop classpath):YuCodesJava/target/YuCodesJava-0.0.1-SNAPSHOT.jar hdfs.CreateDirectory
  *
  */
