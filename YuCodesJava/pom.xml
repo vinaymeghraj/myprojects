@@ -12,6 +12,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spark.version>2.1.0-mapr-1707</spark.version>
+		<mapr.version>5.2.2-mapr</mapr.version>
+		<kafka.version>0.9.0.0-mapr-1707</kafka.version>
 	</properties>
 
 	<repositories>
@@ -29,10 +32,77 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.11</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-hive_2.11</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming_2.11</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-streaming-kafka-0-9_2.11</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.ojai/ojai -->
+		<dependency>
+			<groupId>org.ojai</groupId>
+			<artifactId>ojai</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mapr.streams</groupId>
+			<artifactId>mapr-streams</artifactId>
+			<version>${mapr.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mapr.db</groupId>
+			<artifactId>maprdb-spark</artifactId>
+			<version>${mapr.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.11</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>com.mapr.hadoop</groupId>
 			<artifactId>maprfs</artifactId>
 			<version>5.2.2-mapr</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
