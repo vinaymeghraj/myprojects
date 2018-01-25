@@ -43,7 +43,7 @@ public class SampleProducer {
             LOGGER.warn("Sent message number " + i);
         }
         producer.close();
-        System.out.println("All done.");
+        LOGGER.warn("All Done");
     }
 
     /* Set the value for a configuration parameter.
