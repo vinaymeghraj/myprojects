@@ -8,7 +8,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka09._
 import org.slf4j.LoggerFactory
 
-object StreamingCT22319 {
+object SubscribePattern {
   object LogHolder {
     @transient lazy val LOG = LoggerFactory.getLogger("test")
   }
