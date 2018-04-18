@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory
 
 object SubscribePattern {
   object LogHolder {
-    @transient lazy val LOG = LoggerFactory.getLogger("test")
+    @transient lazy val LOG = LoggerFactory.getLogger("SubscribePattern")
   }
 
   def main(args: Array[String]) {
@@ -34,7 +34,7 @@ object SubscribePattern {
       ConsumerConfig.GROUP_ID_CONFIG -> groupId,
       ConsumerConfig.AUTO_OFFSET_RESET_CONFIG -> offsetReset,
       ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG -> (false: java.lang.Boolean),
-      ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG -> "100",
+      //ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG -> "100",
       //ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG -> "range"
       ConsumerConfig.STREAMS_CONSUMER_DEFAULT_STREAM_CONFIG -> "/tmp/kafka"
     )

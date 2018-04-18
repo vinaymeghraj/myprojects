@@ -32,7 +32,7 @@ object DirectStream {
       ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG -> "org.apache.kafka.common.serialization.StringDeserializer",
       ConsumerConfig.GROUP_ID_CONFIG -> groupId,
       ConsumerConfig.AUTO_OFFSET_RESET_CONFIG -> offsetReset,
-      ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG -> (false: java.lang.Boolean),
+      ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG -> (false: java.lang.Boolean)
       //ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG -> "100",
       //ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG -> "range"
       //ConsumerConfig.STREAMS_CONSUMER_DEFAULT_STREAM_CONFIG -> "/tmp/kafka"
