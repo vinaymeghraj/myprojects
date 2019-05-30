@@ -24,7 +24,6 @@ object StreamToMapRDB {
 
 
     import org.apache.spark.sql.streaming.Trigger
-    import spark.implicits._
 
     //Read from stream
     val stream = spark.readStream.format("kafka")
@@ -34,7 +33,7 @@ object StreamToMapRDB {
       .option("maxOffsetsPerTrigger", 10000)
       .load()
 
-
+    import spark.implicits._
 
     val query3 = stream.select($"value" as "_id")
       .writeStream.format(MapRDBSourceConfig.Format)
