@@ -1,9 +1,6 @@
 import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.PartitionInfo;
-import org.apache.kafka.common.TopicPartition;
 
 import java.io.IOException;
-import java.util.*;
 
 public class SampleConsumer {
     // Set the stream and topic to read from.
