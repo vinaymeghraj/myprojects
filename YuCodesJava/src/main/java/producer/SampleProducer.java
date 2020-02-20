@@ -1,4 +1,4 @@
-package streaming;
+package producer;
 
 /**
  * Created by Vinayaka Meghraj on 1/24/2018.
