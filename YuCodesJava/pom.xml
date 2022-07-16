@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -12,9 +13,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spark.version>2.1.0-mapr-1707</spark.version>
-		<mapr.version>5.2.2-mapr</mapr.version>
-		<kafka.version>0.9.0.0-mapr-1707</kafka.version>
+		<spark.version>2.4.4.500-mapr-636</spark.version>
+		<mapr.version>6.1.0-mapr</mapr.version>
+		<kafka.version>1.1.1-mapr-2201</kafka.version>
 	</properties>
 
 	<repositories>
@@ -80,12 +81,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.mapr.db</groupId>
-			<artifactId>maprdb-spark</artifactId>
-			<version>${mapr.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<version>${kafka.version}</version>
@@ -95,12 +90,6 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka_2.11</artifactId>
 			<version>${kafka.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.mapr.hadoop</groupId>
-			<artifactId>maprfs</artifactId>
-			<version>5.2.2-mapr</version>
 		</dependency>
 
 	</dependencies>
