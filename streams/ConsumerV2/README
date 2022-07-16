@@ -1,0 +1,37 @@
+------------------------
+CommitToOffset.java
+------------------------
+
+Step 1) Compile the Java program
+
+	javac -cp $(mapr classpath) CommitToOffset.java
+
+Step 2) Execute the java program accepting 4 arguments in format :
+
+             java -cp .:$(mapr classpath) CommitToOffset [ConsumerGroupID] [Stream:Topic] [Partition] [Offset]
+
+e.g)
+ java -cp .:$(mapr classpath) CommitToOffset consumer-group /tmp/kafka:test1 0 179527672  Committing offset for groupID:consumer-group topic:/tmp/kafka:test1 paritition:0 offset:179527672
+
+Step 3) Validate the committed offset using maprcli command.
+
+Committed offset is always [Offset] from #2 +1 =  179527673
+
+maprcli stream cursor list -path /tmp/kafka -topic test1 -consumergroup consumer-group -json {
+        "timestamp":1654798784966,
+        "timeofday":"2022-06-09 11:19:44.966 GMT-0700 AM",
+        "status":"OK",
+        "total":1,
+        "data":[
+                {
+                        "consumergroup":"consumer-group",
+                        "topic":"test1",
+                        "partitionid":"0",
+                        "produceroffset":"261271643",
+                        "committedoffset":"179527673",
+                        "producertimestamp":"2022-06-08T12:55:59.030-0700 PM",
+                        "consumertimestamp":"1969-12-31T04:00:00.000-0800 PM",
+                        "consumerlagmillis":"1654718159030"
+                }
+        ]
+}
