@@ -8,9 +8,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spark.version>2.2.1-mapr-1803</spark.version>
+		<spark.version>2.4.4.500-mapr-636</spark.version>
 		<mapr.version>6.0.1-mapr</mapr.version>
-		<kafka.version>1.0.1-mapr-streams-6.0.1</kafka.version>
+		<kafka.version>1.1.1-mapr-2201</kafka.version>
 	</properties>
 
 	<repositories>
