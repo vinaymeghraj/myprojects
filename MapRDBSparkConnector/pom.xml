@@ -46,6 +46,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
 
      <!--   <dependency>
             <artifactId>mapr-ojai-driver</artifactId>
